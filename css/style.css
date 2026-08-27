@@ -20,7 +20,13 @@ body{
   color:var(--ink);
   line-height:1.5;
 }
-h1,h2,h3{font-family:'Fraunces',serif; margin:0; color:var(--navy);}
+
+h1,h2,h3{
+  font-family:'Fraunces',serif; 
+  margin:0; 
+  color:var(--navy);
+}
+
 .eyebrow{
   font-family:'IBM Plex Mono',monospace;
   font-size:.72rem;
@@ -29,13 +35,30 @@ h1,h2,h3{font-family:'Fraunces',serif; margin:0; color:var(--navy);}
   color:var(--teal);
   font-weight:600;
 }
-.wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
-a{color:inherit;}
-button{font-family:inherit;cursor:pointer;}
+
+.wrap{
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 28px;
+}
+
+a{
+  color:inherit;
+}
+
+button{
+  font-family:inherit;
+  cursor:pointer;
+}
 
 /* ---------- SPA VIEW SWITCHING ---------- */
-.view{display:block;}
-.view[hidden]{display:none !important;}
+.view{
+  display:block;
+}
+
+.view[hidden]{
+  display:none !important;
+}
 
 /* ---------- NAV ---------- */
 .topnav{
@@ -44,24 +67,65 @@ button{font-family:inherit;cursor:pointer;}
   backdrop-filter:blur(8px);
   border-bottom:1px solid #dfeceb;
 }
+
 .topnav .wrap{
   display:flex;align-items:center;justify-content:space-between;
   padding:16px 28px;
 }
+
 .brand{
   font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;
   display:flex;align-items:center;gap:8px;
   text-decoration:none;
 }
-.brand .drop{color:var(--aqua);font-size:1.3rem;}
-.topnav nav{display:flex;gap:28px;font-size:.9rem;font-weight:500;}
-.topnav nav a{text-decoration:none;color:var(--navy);opacity:.75;padding:4px 0;border-bottom:2px solid transparent;}
-.topnav nav a:hover{opacity:1;}
-.topnav nav a.active{opacity:1;font-weight:600;border-bottom-color:var(--coral);}
+
+.brand .drop{
+  color:var(--aqua);
+  font-size:1.3rem;
+}
+
+.logo-img{
+  height:60px;
+  width:auto;
+  display:block;
+  border-radius:6px;
+}
+
+.topnav nav{
+  display:flex;
+  gap:15px;
+  font-size:.9rem;
+  font-weight:500;
+}
+
+.topnav nav a{
+  text-decoration:none;
+  color:var(--navy);
+  opacity:.75;
+  padding:4px 0;
+  border-bottom:2px solid transparent;
+}
+
+.topnav nav a:hover{
+  opacity:1;
+}
+
+.topnav nav a.active{
+  opacity:1;
+  font-weight:600;
+  border-bottom-color:var(--coral);
+}
+
 .nav-cta{
-  background:var(--coral);color:white;border:none;padding:10px 20px;
-  border-radius:30px;font-weight:600;font-size:.88rem;
-  text-decoration:none;display:inline-block;
+  background:var(--coral);
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:30px;
+  font-weight:600;
+  font-size:.88rem;
+  text-decoration:none;
+  display:inline-block;
 }
 
 /* ---------- HERO ---------- */
@@ -72,19 +136,42 @@ button{font-family:inherit;cursor:pointer;}
   padding:70px 0 0;
   overflow:hidden;
 }
+
 .hero .wrap{
-  display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:48px;
+  align-items:center;
   padding-bottom:90px;
 }
+
 .hero h1{
-  color:white;font-size:2.9rem;line-height:1.08;font-weight:600;
+  color:white;
+  font-size:2.9rem;
+  line-height:1.08;
+  font-weight:600;
   max-width:520px;
 }
-.hero h1 em{font-style:italic;color:var(--aqua);}
-.hero p.lead{
-  margin-top:18px;color:#cfe8e6;font-size:1.05rem;max-width:440px;
+
+.hero h1 em{
+  font-style:italic;
+  color:var(--aqua);
 }
-.hero-ctas{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+
+.hero p.lead{
+  margin-top:18px;
+  color:#cfe8e6;
+  font-size:1.05rem;
+  max-width:440px;
+}
+
+.hero-ctas{
+  margin-top:28px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
 .btn-primary{
   background:var(--coral);color:white;border:none;padding:14px 26px;
   border-radius:30px;font-weight:600;font-size:.95rem;
@@ -219,7 +306,6 @@ button{font-family:inherit;cursor:pointer;}
 /* ---------- SCHEDULE ---------- */
 .schedule-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:start;}
 .day-picker{display:flex;flex-direction:column;gap:10px;}
-.day-picker-solo{max-width:480px;}
 .day-row{
   display:flex;align-items:center;justify-content:space-between;
   background:white;border:1px solid #e3eeed;border-radius:12px;padding:14px 18px;

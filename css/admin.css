@@ -28,6 +28,7 @@ h1,h2,h3{font-family:'Fraunces',serif;margin:0;color:var(--navy);}
 }
 .topbar .brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:8px;}
 .topbar .drop{color:var(--aqua);}
+.logo-img{height:50px;width:auto;display:block;border-radius:6px;}
 #logoutBtn{
   background:transparent;border:1px solid rgba(255,255,255,.4);color:white;
   padding:8px 16px;border-radius:20px;font-size:.82rem;cursor:pointer;display:none;
