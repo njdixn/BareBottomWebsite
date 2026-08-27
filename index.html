@@ -13,16 +13,15 @@
     <a href="#home" class="brand"><span class="drop">◒</span> Bare Bottom <span style="font-weight:400;opacity:.6;font-size:.85rem;">Pool and Spa</span></a>
     <nav>
       <a href="#services">Services</a>
-      <a href="#specials">Specials</a>
       <a href="#pricing">Pricing</a>
       <a href="#schedule">Schedule</a>
       <a href="#about">About</a>
     </nav>
-    <a href="#schedule" class="nav-cta">Get a Quote</a>
+    <a href="#quote" class="nav-cta">Get a Quote</a>
   </div>
 </div>
 
-<!-- HOME / HERO -->
+<!-- HOME -->
 <section class="view" data-view="home">
   <div class="hero">
     <div class="wrap">
@@ -31,7 +30,7 @@
         <h1 style="margin-top:12px;">From <em>green</em> to gone-swimming, every week.</h1>
         <p class="lead">Licensed, insured, and in your backyard on the same day every week — so your pool stays swim-ready without you thinking about it.</p>
         <div class="hero-ctas">
-          <a href="#schedule" class="btn-primary">Get My Free Quote</a>
+          <a href="#quote" class="btn-primary">Get My Free Quote</a>
           <a href="#pricing" class="btn-ghost">See Pricing ↓</a>
         </div>
         <div class="trust-row">
@@ -48,72 +47,28 @@
     </div>
     <svg class="wave" viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,32 C240,80 480,0 720,24 C960,48 1200,72 1440,28 L1440,74 L0,74 Z" fill="#F4FAF9"/></svg>
   </div>
-</section>
 
-<!-- SERVICES -->
-<section class="view section" data-view="services" id="services">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">What we do</span>
-      <h2>Everything your pool and spa needs, nothing it doesn't.</h2>
-      <p>Every visit follows the same checklist, so the quality doesn't depend on who shows up.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card"><div class="service-icon">〰️</div><h3>Skim & Vacuum</h3><p>Surface debris cleared and floor vacuumed every visit.</p></div>
-      <div class="service-card"><div class="service-icon">🧪</div><h3>Chemical Balancing</h3><p>pH, chlorine, and alkalinity tested and adjusted on-site.</p></div>
-      <div class="service-card"><div class="service-icon">🧽</div><h3>Tile & Surface Brushing</h3><p>Waterline and walls brushed to stop buildup before it starts.</p></div>
-      <div class="service-card"><div class="service-icon">⚙️</div><h3>Filter & Equipment Check</h3><p>Filters cleaned, pumps and heaters inspected for early issues.</p></div>
-      <div class="service-card"><div class="service-icon">🦠</div><h3>Algae Treatment</h3><p>Shock and targeted treatment for green, mustard, or black algae.</p></div>
-      <div class="service-card"><div class="service-icon">🌤️</div><h3>Seasonal Open & Close</h3><p>Full opening in spring and winterizing before the cold hits.</p></div>
-      <div class="service-card"><div class="service-icon">🔧</div><h3>Equipment Repair</h3><p>Pump, heater, and automation repairs from the same crew that cleans your pool and spa.</p></div>
-      <div class="service-card"><div class="service-icon">✨</div><h3>Green-to-Clean Recovery</h3><p>One-time deep clean for pools and spas that have been neglected or just moved into.</p></div>
+  <!-- Specials (home) -->
+  <div class="section" id="specialsHome">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Limited time</span>
+        <h2>Current specials.</h2>
+        <p>Seasonal offers and limited-time deals — updated regularly.</p>
+      </div>
+      <div class="specials-grid" id="specialsGridHome"></div>
     </div>
   </div>
-</section>
 
-<!-- SPECIALS -->
-<section class="view section" data-view="specials" id="specials">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Limited time</span>
-      <h2>Current specials.</h2>
-      <p>Seasonal offers and limited-time deals — updated regularly.</p>
-    </div>
-    <div class="specials-grid" id="specialsGrid">
-      <p class="specials-empty">Loading specials…</p>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="view section pricing-section" data-view="pricing" id="pricing">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Membership plans</span>
-      <h2>Pick a plan, we take it from there.</h2>
-      <p>All plans are month-to-month — cancel or change anytime, no long-term contract.</p>
-    </div>
-    <div class="pricing-grid" id="pricingGrid">
-      <p style="color:#a9c9c6;font-family:'IBM Plex Mono',monospace;font-size:.85rem;">Loading plans…</p>
-    </div>
-  </div>
-</section>
-
-<!-- SCHEDULE -->
-<section class="view section" data-view="schedule" id="schedule">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Get on the schedule</span>
-      <h2>Choose your service day.</h2>
-      <p>We route by neighborhood, so your weekly visit lands on the same day, rain or shine.</p>
-    </div>
-    <div class="schedule-grid">
-      <div class="day-picker" id="dayPicker">
-        <p style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:.85rem;">Loading availability…</p>
+  <!-- Quote form (home only) -->
+  <div class="section" id="quote">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Get a free quote</span>
+        <h2>Request a free quote.</h2>
+        <p>Takes about a minute — we'll follow up within one business day.</p>
       </div>
       <div class="quote-form">
-        <h3>Request a free quote</h3>
-        <p>Takes about a minute — we'll follow up within one business day.</p>
         <div class="form-row">
           <div><label>First name</label><input type="text" id="qFirstName" placeholder="Jamie"></div>
           <div><label>Last name</label><input type="text" id="qLastName" placeholder="Rivera"></div>
@@ -138,6 +93,62 @@
         <button id="qSubmit">Request My Free Quote</button>
         <p id="qStatus" style="font-size:.82rem;margin-top:10px;display:none;"></p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="view section" data-view="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What we do</span>
+      <h2>Everything your pool and spa needs, nothing it doesn't.</h2>
+      <p>Every visit follows the same checklist, so the quality doesn't depend on who shows up.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">〰️</div><h3>Skim & Vacuum</h3><p>Surface debris cleared and floor vacuumed every visit.</p></div>
+      <div class="service-card"><div class="service-icon">🧪</div><h3>Chemical Balancing</h3><p>pH, chlorine, and alkalinity tested and adjusted on-site.</p></div>
+      <div class="service-card"><div class="service-icon">🧽</div><h3>Tile & Surface Brushing</h3><p>Waterline and walls brushed to stop buildup before it starts.</p></div>
+      <div class="service-card"><div class="service-icon">⚙️</div><h3>Filter & Equipment Check</h3><p>Filters cleaned, pumps and heaters inspected for early issues.</p></div>
+      <div class="service-card"><div class="service-icon">🦠</div><h3>Algae Treatment</h3><p>Shock and targeted treatment for green, mustard, or black algae.</p></div>
+      <div class="service-card"><div class="service-icon">🌤️</div><h3>Seasonal Open & Close</h3><p>Full opening in spring and winterizing before the cold hits.</p></div>
+      <div class="service-card"><div class="service-icon">🔧</div><h3>Equipment Repair</h3><p>Pump, heater, and automation repairs from the same crew that cleans your pool and spa.</p></div>
+      <div class="service-card"><div class="service-icon">✨</div><h3>Green-to-Clean Recovery</h3><p>One-time deep clean for pools and spas that have been neglected or just moved into.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="view section pricing-section" data-view="pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head" id="specialsPricingHead">
+      <span class="eyebrow">Limited time</span>
+      <h2>Current specials.</h2>
+      <p>Seasonal offers and limited-time deals — updated regularly.</p>
+    </div>
+    <div class="specials-grid" id="specialsGridPricing" style="margin-bottom:60px;"></div>
+
+    <div class="section-head">
+      <span class="eyebrow">Membership plans</span>
+      <h2>Pick a plan, we take it from there.</h2>
+      <p>All plans are month-to-month — cancel or change anytime, no long-term contract.</p>
+    </div>
+    <div class="pricing-grid" id="pricingGrid">
+      <p style="color:#a9c9c6;font-family:'IBM Plex Mono',monospace;font-size:.85rem;">Loading plans…</p>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="view section" data-view="schedule" id="schedule">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Get on the schedule</span>
+      <h2>Choose your service day.</h2>
+      <p>We route by neighborhood, so your weekly visit lands on the same day, rain or shine.</p>
+    </div>
+    <div class="day-picker day-picker-solo" id="dayPicker">
+      <p style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:.85rem;">Loading availability…</p>
     </div>
   </div>
 </section>
@@ -193,7 +204,6 @@
         <div>
           <h4>Site</h4>
           <a href="#services">Services</a>
-          <a href="#specials">Specials</a>
           <a href="#pricing">Pricing</a>
           <a href="#schedule">Schedule</a>
           <a href="#about">About</a>

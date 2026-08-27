@@ -219,6 +219,7 @@ button{font-family:inherit;cursor:pointer;}
 /* ---------- SCHEDULE ---------- */
 .schedule-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:start;}
 .day-picker{display:flex;flex-direction:column;gap:10px;}
+.day-picker-solo{max-width:480px;}
 .day-row{
   display:flex;align-items:center;justify-content:space-between;
   background:white;border:1px solid #e3eeed;border-radius:12px;padding:14px 18px;

@@ -1,11 +1,6 @@
-// ============================================
-// Simple hash-based router for the single-page site.
-// Each top-level <section class="view" data-view="name"> is shown or
-// hidden based on the current URL hash (e.g. #pricing, #schedule).
-// ============================================
-
-const VIEW_NAMES = ['home', 'services', 'specials', 'pricing', 'schedule', 'about'];
+const VIEW_NAMES = ['home', 'services', 'pricing', 'schedule', 'about'];
 const DEFAULT_VIEW = 'home';
+const SCROLL_TARGETS = { quote: 'quote' };
 
 function getCurrentView() {
   const hash = location.hash.replace('#', '');
@@ -14,6 +9,7 @@ function getCurrentView() {
 
 function renderView() {
   const current = getCurrentView();
+  const rawHash = location.hash.replace('#', '');
 
   document.querySelectorAll('.view').forEach(section => {
     section.hidden = section.dataset.view !== current;
@@ -24,7 +20,14 @@ function renderView() {
     link.classList.toggle('active', linkView === current);
   });
 
-  window.scrollTo({ top: 0, behavior: 'auto' });
+  const scrollTargetId = SCROLL_TARGETS[rawHash];
+  if (scrollTargetId) {
+    requestAnimationFrame(() => {
+      document.getElementById(scrollTargetId)?.scrollIntoView({ behavior: 'smooth' });
+    });
+  } else {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
 }
 
 window.addEventListener('hashchange', renderView);

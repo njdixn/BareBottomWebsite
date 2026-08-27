@@ -1,8 +1,3 @@
-// ============================================
-// Fetches availability, pricing, and specials from Supabase
-// and renders them into the page on load.
-// ============================================
-
 const SLOT_CLASS = {
   Open: 'slot-open',
   Limited: 'slot-limited',
@@ -55,25 +50,37 @@ async function loadPricing() {
 }
 
 async function loadSpecials() {
-  const grid = document.getElementById('specialsGrid');
+  const homeBlock = document.getElementById('specialsHome');
+  const homeGrid = document.getElementById('specialsGridHome');
+  const pricingHead = document.getElementById('specialsPricingHead');
+  const pricingGrid = document.getElementById('specialsGridPricing');
+
   const { data, error } = await sb
     .from('specials')
     .select('*')
     .eq('active', true)
     .order('sort_order', { ascending: true });
 
-  if (error || !data || data.length === 0) {
-    grid.innerHTML = '<p class="specials-empty">No current specials — check back soon!</p>';
-    return;
-  }
+  const hasSpecials = !error && data && data.length > 0;
 
-  grid.innerHTML = data.map(s => `
-    <div class="special-card">
-      <span class="special-tag">SPECIAL</span>
-      <h3>${s.title}</h3>
-      <p>${s.description}</p>
-    </div>
-  `).join('');
+  const cardsHtml = hasSpecials
+    ? data.map(s => `
+        <div class="special-card">
+          <span class="special-tag">SPECIAL</span>
+          <h3>${s.title}</h3>
+          <p>${s.description}</p>
+        </div>
+      `).join('')
+    : '';
+
+  // Home: hide the whole block if there's nothing to show
+  homeBlock.style.display = hasSpecials ? 'block' : 'none';
+  homeGrid.innerHTML = cardsHtml;
+
+  // Pricing: hide heading + grid together if there's nothing to show
+  pricingHead.style.display = hasSpecials ? 'block' : 'none';
+  pricingGrid.style.display = hasSpecials ? 'grid' : 'none';
+  pricingGrid.innerHTML = cardsHtml;
 }
 
 loadAvailability();
