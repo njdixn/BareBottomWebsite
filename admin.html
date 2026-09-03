@@ -1,94 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bare Bottom Pool and Spa - Admin</title>
-<link rel="stylesheet" href="css/admin.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=/admin/login">
+  <title>Redirecting to Admin...</title>
+  <script>window.location.replace('/admin/login');</script>
 </head>
 <body>
-
-<div class="topbar">
-  <div class="brand"><img src="images/logo.png" alt="Bare Bottom Pool and Spa logo" class="logo-img"> Admin</div>
-  <button id="logoutBtn">Log out</button>
-</div>
-
-<div id="loginScreen">
-  <h2>Owner login</h2>
-  <p>Log in to update availability and pricing.</p>
-  <div class="field">
-    <label>Email</label>
-    <input type="email" id="email" placeholder="you@barebottompoolandspa.com">
-  </div>
-  <div class="field">
-    <label>Password</label>
-    <input type="password" id="password" placeholder="••••••••">
-  </div>
-  <button id="loginBtn">Log in</button>
-  <div id="loginError">Incorrect email or password.</div>
-</div>
-
-<div id="dashboard">
-  <div class="wrap">
-
-    <div class="card">
-      <h3>Weekly availability</h3>
-      <p>This controls the "Choose your service day" section on the live site.</p>
-      <div id="availList"></div>
-      <div class="card-footer">
-        <button class="save-btn" id="saveAvail">Save availability</button>
-        <span class="status-msg" id="availStatus"></span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Pricing plans</h3>
-      <p>Update the price and what's included in each plan. One line per feature.</p>
-      <div id="pricingList"></div>
-      <div class="card-footer">
-        <button class="save-btn" id="savePricing">Save pricing</button>
-        <span class="status-msg" id="pricingStatus"></span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Specials</h3>
-      <p>Shown in the "Current specials" section on the Home and Pricing pages. Turn a special off instead of deleting it if you might reuse it later.</p>
-      <div id="specialsList"></div>
-      <div class="card-footer">
-        <button class="save-btn" id="saveSpecials">Save specials</button>
-        <button class="add-btn" id="addSpecial">+ Add special</button>
-        <span class="status-msg" id="specialsStatus"></span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Recent quote requests</h3>
-      <p>Submissions from the "Request a Free Quote" form on the site, newest first.</p>
-      <div id="leadsList"></div>
-    </div>
-
-    <div class="card">
-      <h3>Recent day requests</h3>
-      <p>Submissions from "Request a Specific Day" on the Schedule page, newest first.</p>
-      <div id="scheduleRequestsList"></div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Scripts: order matters — Supabase client loads before anything that uses it -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="js/supabase-client.js"></script>
-<script src="js/admin-auth.js"></script>
-<script src="js/admin-availability.js"></script>
-<script src="js/admin-pricing.js"></script>
-<script src="js/admin-specials.js"></script>
-<script src="js/admin-leads.js"></script>
-<script src="js/admin-schedule-requests.js"></script>
-<script>
-checkSession();
-</script>
-
+  <p>Redirecting to <a href="/admin/login">Admin Login</a>...</p>
 </body>
 </html>

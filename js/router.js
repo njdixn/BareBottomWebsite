@@ -15,7 +15,7 @@ function renderView() {
     section.hidden = section.dataset.view !== current;
   });
 
-  document.querySelectorAll('.topnav nav a').forEach(link => {
+  document.querySelectorAll('.route-link').forEach(link => {
     const linkView = link.getAttribute('href').replace('#', '');
     link.classList.toggle('active', linkView === current);
   });
